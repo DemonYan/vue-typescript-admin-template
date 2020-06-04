@@ -12,6 +12,7 @@ import store from '@/store'
 import router from '@/router'
 import '@/icons/components'
 import '@/permission'
+import i18n from '@/lang'
 
 Vue.use(ElementUI)
 Vue.use(SvgIcon, {
@@ -25,5 +26,7 @@ Vue.config.productionTip = false
 new Vue({
   router,
   store,
+  i18n,
   render: (h) => h(App)
 }).$mount('#app')
+
