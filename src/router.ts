@@ -51,107 +51,55 @@ export default new Router({
       ]
     },
     {
-      path: '/example',
+      path: '/task',
       component: Layout,
-      redirect: '/example/tree',
+      redirect: '/task/list',
       meta: {
-        title: 'Example',
-        icon: 'example'
+        title: '策略管理',
+        icon: 'list'
       },
       children: [
         {
-          path: 'tree',
-          component: () => import(/* webpackChunkName: "tree" */ '@/views/tree/index.vue'),
+          path: 'list',
+          component: () => import(/* webpackChunkName: "table" */ '@/views/task/task_list.vue'),
           meta: {
-            title: 'Tree',
-            icon: 'tree'
+            title: '策略列表',
+            icon: 'table'
           }
         },
         {
-          path: 'table',
-          component: () => import(/* webpackChunkName: "table" */ '@/views/table/index.vue'),
-          meta: {
-            title: 'Table',
-            icon: 'table'
-          }
-        }
-      ]
-    },
-    {
-      path: '/form',
-      component: Layout,
-      children: [
-        {
-          path: 'index',
+          path: 'add',
           component: () => import(/* webpackChunkName: "form" */ '@/views/form/index.vue'),
           meta: {
-            title: 'Form',
+            title: '新增策略',
             icon: 'form'
           }
         }
       ]
     },
     {
-      path: '/nested',
+      path: '/old',
       component: Layout,
-      redirect: '/nested/menu1',
+      redirect: '/old/list',
       meta: {
-        title: 'Nested',
-        icon: 'nested'
+        title: '旧策略管理',
+        icon: 'list'
       },
       children: [
         {
-          path: 'menu1',
-          component: () => import(/* webpackChunkName: "menu1" */ '@/views/nested/menu1/index.vue'),
-          redirect: '/nested/menu1/menu1-1',
-          meta: { title: 'Menu1' },
-          children: [
-            {
-              path: 'menu1-1',
-              component: () => import(/* webpackChunkName: "menu1-1" */ '@/views/nested/menu1/menu1-1/index.vue'),
-              meta: { title: 'Menu1-1' }
-            },
-            {
-              path: 'menu1-2',
-              component: () => import(/* webpackChunkName: "menu1-2" */ '@/views/nested/menu1/menu1-2/index.vue'),
-              redirect: '/nested/menu1/menu1-2/menu1-2-1',
-              meta: { title: 'Menu1-2' },
-              children: [
-                {
-                  path: 'menu1-2-1',
-                  component: () => import(/* webpackChunkName: "menu1-2-1" */ '@/views/nested/menu1/menu1-2/menu1-2-1/index.vue'),
-                  meta: { title: 'Menu1-2-1' }
-                },
-                {
-                  path: 'menu1-2-2',
-                  component: () => import(/* webpackChunkName: "menu1-2-2" */ '@/views/nested/menu1/menu1-2/menu1-2-2/index.vue'),
-                  meta: { title: 'Menu1-2-2' }
-                }
-              ]
-            },
-            {
-              path: 'menu1-3',
-              component: () => import(/* webpackChunkName: "menu1-3" */ '@/views/nested/menu1/menu1-3/index.vue'),
-              meta: { title: 'Menu1-3' }
-            }
-          ]
+          path: 'list',
+          component: () => import(/* webpackChunkName: "table" */ '@/views/table/index.vue'),
+          meta: {
+            title: '策略列表',
+            icon: 'table'
+          }
         },
         {
-          path: 'menu2',
-          component: () => import(/* webpackChunkName: "menu2" */ '@/views/nested/menu2/index.vue'),
-          meta: { title: 'Menu2' }
-        }
-      ]
-    },
-    {
-      path: 'external-link',
-      component: Layout,
-      children: [
-        {
-          path: 'https://github.com/Armour/vue-typescript-admin-template',
+          path: 'add',
+          component: () => import(/* webpackChunkName: "form" */ '@/views/form/index.vue'),
           meta: {
-            title: 'External Link',
-            icon: 'link'
+            title: '新增策略',
+            icon: 'form'
           }
         }
       ]
