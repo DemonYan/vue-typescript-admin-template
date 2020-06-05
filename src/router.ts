@@ -44,7 +44,7 @@ export default new Router({
           path: 'dashboard',
           component: () => import(/* webpackChunkName: "dashboard" */ '@/views/dashboard/index.vue'),
           meta: {
-            title: 'Dashboard',
+            title: 'dashboard',
             icon: 'dashboard'
           }
         }
@@ -55,7 +55,7 @@ export default new Router({
       component: Layout,
       redirect: '/task/list',
       meta: {
-        title: '策略管理',
+        title: 'task',
         icon: 'list'
       },
       children: [
@@ -63,7 +63,7 @@ export default new Router({
           path: 'list',
           component: () => import(/* webpackChunkName: "table" */ '@/views/task/task_list.vue'),
           meta: {
-            title: '策略列表',
+            title: 'task_list',
             icon: 'table'
           }
         },
@@ -71,34 +71,7 @@ export default new Router({
           path: 'add',
           component: () => import(/* webpackChunkName: "form" */ '@/views/form/index.vue'),
           meta: {
-            title: '新增策略',
-            icon: 'form'
-          }
-        }
-      ]
-    },
-    {
-      path: '/old',
-      component: Layout,
-      redirect: '/old/list',
-      meta: {
-        title: '旧策略管理',
-        icon: 'list'
-      },
-      children: [
-        {
-          path: 'list',
-          component: () => import(/* webpackChunkName: "table" */ '@/views/table/index.vue'),
-          meta: {
-            title: '策略列表',
-            icon: 'table'
-          }
-        },
-        {
-          path: 'add',
-          component: () => import(/* webpackChunkName: "form" */ '@/views/form/index.vue'),
-          meta: {
-            title: '新增策略',
+            title: 'task_add',
             icon: 'form'
           }
         }
