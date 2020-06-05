@@ -122,6 +122,7 @@ export default {
     executor: 'executor',
     hit_strategy: 'hit_strategy',
     selfdefined: 'self defined',
-    task_status: 'status'
+    status: 'status',
+    action: 'action'
   }
 }

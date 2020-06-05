@@ -115,6 +115,7 @@ export default {
     executor: '执行者',
     hit_strategy: '策略名称',
     selfdefined: '是否自定义',
-    task_status: '任务状态'
+    status: '任务状态',
+    action: '操作'
   }
 }
