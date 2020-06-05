@@ -112,5 +112,16 @@ export default {
     showSidebarLogo: 'Sidebar Logo',
     fixedHeader: 'Fixed Header',
     sidebarTextTheme: 'Sidebar Text Theme'
+  },
+  task: {
+    id: 'id',
+    name: 'name',
+    create_time: 'create time',
+    creator: 'creator',
+    execute_time: 'last execute time',
+    executor: 'executor',
+    hit_strategy: 'hit_strategy',
+    selfdefined: 'self defined',
+    task_status: 'status'
   }
 }
